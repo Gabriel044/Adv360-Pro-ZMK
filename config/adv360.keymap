@@ -26,6 +26,34 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
+
+      prnt: parenthesis {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp RPAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      brkt: brackets {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LBKT>, <&kp RBKT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      brcs: curly_braces {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LBRC>, <&kp RBRC>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      cond: conditional_operators {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp AMPS>, <&kp PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      }
     };
 
   keymap {
