@@ -54,6 +54,48 @@
         bindings = <&kp AMPS>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
       };
+      left_pl: left_placement {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_left_half>, <&macro_left_third>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      right_pl: right_placement {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_right_half>, <&macro_right_third>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      center_pl: center_pl {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_center_third>, <&macro_center_half>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      ttl_pd: two_thirds_left_prev_display {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_two_third_left>, <&macro_prev_display>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      ttr_nd: two_thirds_right_next_display {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_two_third_right>, <&macro_next_display>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      left_corner: left_corner {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_top_left>, <&macro_bottom_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+      right_corner: right_corner {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_top_right>, <&macro_bottom_right>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
     };
 
   keymap {
@@ -63,7 +105,7 @@
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &brkt                                                            &prnt &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &brcs           &kp LGUI &kp RCTRL &kp RGUI  &kp LALT           &cond &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &brcs           &kp LGUI &kp LCTRL &kp RGUI  &kp RALT           &cond &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
       >;
@@ -72,18 +114,18 @@
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LGUI &kp RCTRL &kp RGUI  &kp LALT           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LGUI &kp LCTRL &kp RGUI  &kp RALT           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none         &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                       &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &kp K_PP &kp K_PREV &kp K_NEXT      &trans &trans &trans &trans &trans &trans              &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &trans  &trans
+        &kp F1     &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &left_corner                                       &right_corner &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &macro_fs  &trans &trans &trans &trans &trans  &left_pl                                           &right_pl     &trans &trans &trans &trans  &trans  &trans
+        &center_pl &trans &trans &trans &trans &trans  &ttl_pd         &trans &trans &trans &trans        &ttr_nd       &trans &trans &trans &trans  &trans  &trans
+        &trans     &trans &trans &trans &trans &trans                         &trans &trans                             &trans &trans &trans &trans  &trans  &trans
+        &trans     &trans &kp K_PP &kp K_PREV &kp K_NEXT        &trans &trans &trans &trans &trans &trans               &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &trans  &trans
       >;
     };
     mod {

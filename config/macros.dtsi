@@ -34,3 +34,105 @@
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
+  macro_left_half: macro_left_half {
+    compatible = "zmk,behavior-macro";
+    label = "macro_left_half";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp LEFT>, <&macro_release &kp LALT &kp LGUI &kp LEFT>;
+  };
+  macro_right_half: macro_right_half {
+    compatible = "zmk,behavior-macro";
+    label = "macro_right_half";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp RIGHT>, <&macro_release &kp LALT &kp LGUI &kp RIGHT>;
+  };
+  macro_center_half: macro_center_half {
+    compatible = "zmk,behavior-macro";
+    label = "macro_center_half";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp RETURN>, <&macro_release &kp LALT &kp LGUI &kp RETURN>;
+  };
+  macro_top_half: macro_top_half {
+    compatible = "zmk,behavior-macro";
+    label = "macro_top_half";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp UP>, <&macro_release &kp LALT &kp LGUI &kp UP>;
+  };
+  macro_bottom_half: macro_bottom_half {
+    compatible = "zmk,behavior-macro";
+    label = "macro_bottom_half";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp DOWN>, <&macro_release &kp LALT &kp LGUI &kp DOWN>;
+  };
+  macro_top_left: macro_top_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_top_left";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LGUI &kp LEFT>, <&macro_release &kp LCTRL &kp LGUI &kp LEFT>;
+  };
+  macro_top_right: macro_top_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_top_right";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LGUI &kp RIGHT>, <&macro_release &kp LCTRL &kp LGUI &kp RIGHT>;
+  };
+  macro_bottom_left: macro_bottom_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_bottom_left";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LSHFT &kp LCTRL &kp LGUI &kp LEFT>, <&macro_release &kp LSHFT &kp LCTRL &kp LGUI &kp LEFT>;
+  };
+  macro_bottom_right: macro_bottom_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_bottom_right";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LSHFT &kp LCTRL &kp LGUI &kp RIGHT>, <&macro_release &kp LSHFT &kp LCTRL &kp LGUI &kp RIGHT>;
+  };
+  macro_left_third: macro_left_third {
+    compatible = "zmk,behavior-macro";
+    label = "macro_left_third";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LALT &kp LEFT>, <&macro_release &kp LCTRL &kp LALT &kp LEFT>;
+  };
+  macro_center_third: macro_center_third {
+    compatible = "zmk,behavior-macro";
+    label = "macro_center_third";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LALT &kp RETURN>, <&macro_release &kp LCTRL &kp LALT &kp RETURN>;
+  };
+  macro_right_third: macro_right_third {
+    compatible = "zmk,behavior-macro";
+    label = "macro_right_third";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LALT &kp RIGHT>, <&macro_release &kp LCTRL &kp LALT &kp RIGHT>;
+  };
+  macro_two_third_left: macro_two_third_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_two_third_left";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LSHFT &kp LGUI &kp LEFT>, <&macro_release &kp LSHFT &kp LGUI &kp LEFT>;
+  };
+  macro_two_third_right: macro_two_third_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_two_third_right";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LSHFT &kp LGUI &kp RIGHT>, <&macro_release &kp LSHFT &kp LGUI &kp RIGHT>;
+  };
+  macro_full_size: macro_full_size {
+    compatible = "zmk,behavior-macro";
+    label = "macro_full_size";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT &kp LGUI &kp LS(F)>, <&macro_release &kp LALT &kp LGUI &kp LS(F)>;
+  };
+  macro_next_display: macro_next_display {
+    compatible = "zmk,behavior-macro";
+    label = "macro_next_display";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI &kp RIGHT>, <&macro_release &kp LCTRL &kp LALT &kp LGUI &kp RIGHT>;
+  };
+  macro_prev_display: macro_prev_display {
+    compatible = "zmk,behavior-macro";
+    label = "macro_prev_display";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI &kp LEFT>, <&macro_release &kp LCTRL &kp LALT &kp LGUI &kp LEFT>;
+  };
