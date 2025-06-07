@@ -89,12 +89,14 @@
         #binding-cells = <0>;
         bindings = <&macro_top_left>, <&macro_bottom_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT)>;
       };
       right_corner: right_corner {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&macro_top_right>, <&macro_bottom_right>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT)>;
       };
     };
 
