@@ -118,7 +118,7 @@
     #binding-cells = <0>;
     bindings = <&macro_press &kp LSHFT &kp LGUI &kp RIGHT>, <&macro_release &kp LSHFT &kp LGUI &kp RIGHT>;
   };
-  macro_full_size: macro_full_size {
+  macro_fs: macro_full_size {
     compatible = "zmk,behavior-macro";
     label = "macro_full_size";
     #binding-cells = <0>;
